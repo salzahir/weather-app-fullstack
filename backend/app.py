@@ -1,7 +1,7 @@
-from flask import Flask, jsonify, request
-import requests
-from dotenv import load_dotenv
-from flask_cors import CORS
+from flask import Flask, jsonify, request # type: ignore
+import requests # type: ignore
+from dotenv import load_dotenv # type: ignore
+from flask_cors import CORS # type: ignore
 import os
 
 load_dotenv()
@@ -23,6 +23,7 @@ def home():
 def get_weather():
 
     city = request.args.get("location")
+    
     if not city:
         return jsonify({"error": "Missing location parameter"}), 400
     
@@ -39,14 +40,13 @@ def get_weather():
 
 
 def parse_json(response):
+
     address = response["address"]
-    current_day = response["days"][0]  # Ensure 'days' exists in the API response
+    current_day = response["days"][0]
     temp = current_day["temp"]
     feelslike = current_day["feelslike"]
     datetime = current_day["datetime"]
     conditions = current_day["conditions"]
-
-    # Handle alerts
     alerts = response.get("alerts", [])
 
     return jsonify({

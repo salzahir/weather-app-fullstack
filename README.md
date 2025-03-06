@@ -11,7 +11,6 @@ A sleek and responsive full-stack weather application that fetches real-time wea
 - 📆 **Current Conditions & Forecast** – View today's weather details and alerts  
 - 🎨 **Modern UI** – Clean and responsive design for a seamless experience  
 - ⚡ **Fast & Lightweight** – Optimized performance with Flask and Webpack  
-
 ---
 
 ## 🛠️ Technologies Used  
