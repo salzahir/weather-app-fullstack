@@ -128,3 +128,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Created by venv; see https://docs.python.org/3/library/venv.html
+.env
+myenv/
+__pycache__/
+*.pyc
+.DS_Store
